@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebGIS Kota Bandung</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css" />
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+  <link rel="stylesheet" href="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.css" />
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="asset/logo.png" alt="Logo" width="100" />
+        <h1>WebGIS Kota Bandung</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#hero-section">Home</a></li>
+          <li><a href="#map-section">Map</a></li>
+          <li><a href="#data-section">Data</a></li>
+          <li><a href="#author-section">Author</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <div id="hero-section" class="hero-section">
+    <div class="hero-content">
+      <h1>WebGIS Basis Data Spasial Kota Bandung</h1>
+      <p>Halaman untuk Melakukan Eksplorasi Basis Data Spasial di Kota Bandung</p>
+    </div>
+  </div>
+
+  <!-- MAP SECTION -->
+  <div id="map-section">
+    <h2>Jelajahi WebGIS Basis Data Spasial Kota Bandung</h2>
+    <div id="map" style="width: 95%; height: 800px; margin: auto;"></div>
+  </div>
+
+  <!-- DATA SECTION -->
+  <div id="data-section">
+    <h2>Data Tersedia</h2>
+    <div class="container">
+      <div class="column">
+        <div class="data-item">
+          <img src="https://asset.kompas.com/crops/GEIiQSsEkCKrIGWEjOp_GaYHIHA=/0x0:1000x667/1200x800/data/photo/2022/07/25/62dec6809a479.jpg" alt="Image" />
+          <div class="description">
+            <h3>Data Batas Administrasi</h3>
+            <p>Batas administrasi Kota Bandung adalah garis imajiner yang membagi wilayah Kota Bandung dari daerah sekitarnya, memastikan setiap kawasan berada di bawah yurisdiksi pemerintahan kota. Kota Bandung berbatasan dengan Kabupaten Bandung di sebelah selatan dan barat, Kabupaten Bandung Barat di sebelah utara dan barat, serta Kabupaten Sumedang di sebelah timur. Batas ini ditentukan berdasarkan ketetapan pemerintah dan dituangkan dalam peta resmi yang menggambarkan secara detail cakupan wilayah Kota Bandung. Penentuan batas administrasi ini penting untuk keperluan perencanaan pembangunan, pengelolaan sumber daya, serta pelayanan publik. Dengan adanya peta batas administrasi, masyarakat dan pemerintah dapat memahami dengan jelas wilayah kewenangan dan tanggung jawab Kota Bandung.</p>
+          </div>
+        </div>
+      </div>
+    <!-- Kolom 2: Data Penggunaan Lahan -->
+    <div class="column">
+      <div class="data-item">
+        <img src="https://asset.kompas.com/crops/oQwrjeM74VB-ZASu0Z8Wruy9wbY=/0x0:1200x800/1200x800/data/photo/2023/10/11/6526642bf1cf7.jpg" alt="Image" />
+        <div class="description">
+          <h3>Data Penggunaan Lahan</h3>
+          <p>Penggunaan lahan Kota Bandung mencakup berbagai jenis pemanfaatan ruang yang mencerminkan fungsi dan aktivitas masyarakat kota. Secara umum, wilayah Kota Bandung terbagi menjadi lahan permukiman, kawasan komersial, lahan industri, serta ruang terbuka hijau yang berfungsi sebagai paru-paru kota. Di pusat kota, penggunaan lahan didominasi oleh kawasan komersial, perkantoran, dan perumahan padat penduduk, sementara daerah pinggiran memiliki lebih banyak lahan pertanian dan ruang terbuka. Pembangunan infrastruktur perkotaan seperti jalan, jembatan, dan fasilitas umum juga menjadi bagian penting dari penggunaan lahan kota. Melalui pengelolaan penggunaan lahan yang terencana, Kota Bandung dapat menjaga keseimbangan antara kebutuhan pembangunan dan pelestarian lingkungan.</p>
+        </div>
+      </div>
+    </div>
+  
+  <!-- Kolom 3: Data Jembatan -->
+  <div class="column">
+    <div class="data-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Bandung_pasopati.jpg" alt="Image" />
+      <div class="description">
+        <h3>Data Jembatan</h3>
+        <p>Jembatan-jembatan di Kota Bandung memiliki peranan penting dalam mendukung mobilitas dan konektivitas antarwilayah. Salah satu jembatan terkenal adalah Jembatan Pasupati yang membentang di atas kawasan Cikapayang dan menjadi ikon kota dengan desain modernnya. Selain itu, terdapat juga Jembatan Layang Antapani yang dihiasi seni mural dengan motif batik, mencerminkan kekayaan budaya lokal. Jembatan ini tidak hanya berfungsi sebagai infrastruktur transportasi tetapi juga sebagai daya tarik visual bagi masyarakat dan wisatawan. Melalui pembangunan dan pemeliharaan jembatan-jembatan ini, Kota Bandung terus berupaya meningkatkan aksesibilitas dan kenyamanan bagi pengguna jalan.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <!-- AUTHOR SECTION -->
+  <div id="author-section">
+    <div class="author-content">
+      <h2>Tentang Pembuat</h2>
+      <img src="asset/author-picture.png" alt="Profile Picture" class="profile-picture" />
+      <div class="author-name">
+        <h3>Fathina Tazakka</h3>
+      </div>
+      <p>Seorang Analis Sistem Informasi Geografis (SIG) memiliki peran penting dalam mengintegrasikan data spasial dengan analisis untuk menghasilkan informasi yang berguna dalam pengambilan keputusan. Mereka bekerja dengan berbagai perangkat lunak GIS untuk memetakan, menganalisis, dan memvisualisasikan data geografis, seperti pemetaan pola distribusi populasi, perencanaan penggunaan lahan, analisis bencana alam, dan perencanaan infrastruktur.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <div class="footer-content">
+      <h3>Hubungi Saya</h3>
+      <p>Email: fathinatz@gmail.com</p>
+      <p>Instagram: @fathinatz</p>
+      <p>Phone: +6285523797934</p>
+    </div>
+  </div>
+
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+  <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+  <script src="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.js"></script>
+
+  <!-- Your custom scripts -->
+  <script src="script.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
